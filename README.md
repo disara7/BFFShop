@@ -1,4 +1,4 @@
-# 🛍 BFFShop — E-commerce with BFF UI Architecture
+# BFFShop — E-commerce with BFF UI Architecture
 
 This is a **simple e-commerce application** implemented with a **Backend-for-Frontend (BFF)** architecture.  
 It comprises **3 components**:
