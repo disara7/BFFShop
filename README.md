@@ -66,6 +66,7 @@ npm start
 ✅ Scalable: Allows adding more UI clients (like a mobile app) with their own tailored BFF.
 
 🔹 Notes
+
 The API service must be up first.
 
 The BFF depends on API service.
