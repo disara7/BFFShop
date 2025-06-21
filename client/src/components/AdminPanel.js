@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './AdminPanel.css';
 
 function AdminPanel() {
   const [products, setProducts] = useState([]);
@@ -35,28 +36,27 @@ function AdminPanel() {
   }, []);
 
   return (
-    <div>
+    <div className="admin-panel">
       <h2>Admin Panel</h2>
-      <form onSubmit={handleSubmit} style={{ marginBottom: '2rem' }}>
+
+      <form onSubmit={handleSubmit} className="product-form">
         <input
           type="text"
           placeholder="Product Name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          style={{ marginRight: '1rem' }}
         />
         <input
           type="number"
           placeholder="Price"
           value={formData.price}
           onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-          style={{ marginRight: '1rem' }}
         />
         <button type="submit">Add Product</button>
       </form>
 
       <h3>Product List</h3>
-      <table border="1" cellPadding="10">
+      <table className="product-table">
         <thead>
           <tr>
             <th>ID</th><th>Name</th><th>Price</th>
