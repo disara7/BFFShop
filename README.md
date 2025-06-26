@@ -67,8 +67,8 @@ npm start
 
 🔹 Notes
 
-The API service must be up first.
-
-The BFF depends on API service.
-
-The React UI depends on the BFF.
+<ul>
+<li>The API service must be up first.</li>
+<li>The BFF depends on API service.</li>
+<li>The React UI depends on the BFF.</li>
+</ul>
