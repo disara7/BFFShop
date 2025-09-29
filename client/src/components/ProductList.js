@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './ProductList.css'; // import CSS file
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -11,11 +12,22 @@ const ProductList = () => {
   }, []);
 
   return (
-    <ul>
+    <div className="product-grid">
       {products.map(product => (
-        <li key={product.id}>{product.name} - ${product.price}</li>
+        <div key={product.id} className="product-card">
+          <div className="product-image">
+            {product.image ? (
+              <img src={product.image} alt={product.name} />
+            ) : (
+              <span>No Image</span>
+            )}
+          </div>
+          <h2 className="product-title">{product.name}</h2>
+          <p className="product-price">${product.price}</p>
+          <button className="product-btn">Add to Cart</button>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 
